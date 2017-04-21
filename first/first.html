@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js/angular.min.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myAppController">
+		<div ng-repeat="data in info">
+			Name: {{data.name}} <br />
+			Address: {{data.address}}
+		</div>
+		<div>
+			<div ng-repeat="data in fileData">
+				{{data.name}}
+			</div>
+		</div>
+		<div>
+			{{fileData2}}
+		</div>
+		<div class="form">
+		<form>
+			<div>
+				<input ng-model="username" type="text" name="username"  />
+			</div>
+			<div>
+				<input ng-model="password" type="password" name="password"  />
+			</div>
+			<div>
+				<button ng-click="Login()">Login</button>
+			</div>
+		</form>
+	</div>
+	</div>
+
+</body>
+</html>
